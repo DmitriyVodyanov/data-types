@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-
         byte byteTypeMax = Byte.MAX_VALUE;
         byte byteType = 22;
         byte byteTypeMin = Byte.MIN_VALUE;
@@ -25,11 +24,6 @@ public class Main {
         String stringType = "text";
         boolean booleanTypeTrue = true;
         boolean booleanTypeFalse = false;
-
-//        System.out.println(sumValueCheckInterval(10, 1));
-//        System.out.println(negativeNumber(0));
-//        printName("asdasd");
-        System.out.println(checkLeapYear(2000));
     }
 
     double calculateExample (int a, int b, int c, int d) {
@@ -39,7 +33,6 @@ public class Main {
 
     static boolean sumValueCheckInterval(int valueOne, int valueTwo) {
         int sum = valueOne + valueTwo;
-//        boolean checkInterval = (sum >= 10 && sum <= 20) ? true : false;
         return (sum >= 10 && sum <= 20);
     }
 
@@ -56,9 +49,9 @@ public class Main {
     }
 
     static boolean checkLeapYear(int year) {
-        if (year % 4 == 0 && year % 400 == 0) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             return true;
         }
-
+        return false;
     }
 }
